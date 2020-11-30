@@ -86,6 +86,17 @@ body {
     margin-right: 0;
     transition: all 0.3s ease;
 }
+
+.offcanvas-btn:hover {
+    animation: moveOnHover 1s infinite alternate;
+}
+
+@keyframes moveOnHover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+
 .offcanvas-btn-open {
     margin-right: 80vw;
 }
@@ -218,7 +229,7 @@ header.masthead .intro-text .intro-lead-in {
     font-style: italic;
     line-height: 22px;
     margin-bottom: 25px;
-    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 header.masthead .intro-text .intro-heading {
     font-size: 50px;
@@ -691,10 +702,10 @@ ul.social-buttons li a {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    color: white;
+    color: black;
     border-radius: 100%;
     outline: none;
-    background-color: #222222;
+    background-color: white;
 }
 ul.social-buttons li a:active,
 ul.social-buttons li a:focus,
