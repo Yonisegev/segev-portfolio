@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoni's Bookshop</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Texturina:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="onInit()">
+    <div class="header-container">
+        <h1>Welcome To Your Bookshop</h1>
+
+    </div>
+    <div class="bookshop-container">
+        <div class="table-container">
+
+            <div class="paging-buttons">
+                <h4 onclick="onAddModal()" class="create-link">Create new book</h4>
+                <div class="btn-container">
+                    <button onclick="onPrevPage()" class="back-btn page-btn">⏮</button>
+                    <span class="page-number">0</span>
+                    <button onclick="onNextPage()" class="next-btn page-btn">⏭</button>
+                </div>
+            </div>
+
+            <div hidden class="add-book-modal">
+                <div class="input-container">
+                    <span>* - Inputs are required.</span>
+                    <label>Book Title* <br>
+                        <input type="text" name="title" placeholder="Book Title">
+                    </label>
+
+                    <label>Book Price* <br>
+                        <input class="price-input" type="number" name="price" placeholder="Book Price">
+                    </label>
+
+                    <label>Image Link <br>
+                        <input type="url" name="img" placeholder="Book Image">
+                    </label>
+                    <span hidden class="add-warning">Please enter title and price</span>
+                    <button onclick="onAddBook()" class="btn new-btn" type="submit">Add Book</button>
+                    <button onclick="onAddModal()" class="btn new-btn">Close</button>
+                </div>
+            </div>
+
+            <div hidden class="update-container">
+
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th class="table-header-id">Id</th>
+                        <th onclick="onSetSort('name')" class="table-header-title">Title</th>
+                        <th onclick="onSetSort('price')" class="table-header-price">Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="books-container">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="details-modal">
+            <div class="details-container move">
+                <h2>Book Details</h2>
+                <span class="modal-title"></span>
+                <span class="modal-price"></span>
+                <span class="modal-desc"></span>
+                <span><img class="modal-img" src=""></span>
+                <span class="modal-rate">
+                    <span class="minus" onclick="onMinusClick(event)">-</span>
+                    <span class="rate-number">9</span>
+                    <span class="plus" onclick="onPlusClick(event)">+</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/util-service.js"></script>
+    <script src="./js/storage-service.js"></script>
+    <script src="./js/book-service.js"></script>
+    <script src="./js/book-controller.js"></script>
+</body>
+
+</html>

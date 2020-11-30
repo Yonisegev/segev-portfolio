@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch The Nums</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1 class="main-heading">Touch The Nums</h1>
+    <div class="stopwatch">
+        <h3>Time elapsed:</h3>
+        <output id="display-area">00:00.000</output>
+    </div>
+
+
+    <button class="btn game-btn" onclick="createNumbers(16)">New Game</button>
+    <button class="btn easy-btn" onclick="createNumbers(16)">Easy(16)</button>
+    <button class="btn hard-btn" onclick="createNumbers(25)">Hard(25)</button>
+    <button class="btn extreme-btn" onclick="createNumbers(36)">Extreme(36)</button>
+    <table class="table-main">
+        <tbody class="tbody">
+
+        </tbody>
+    </table>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/stopwatch.js"></script>
+</body>
+
+</html>

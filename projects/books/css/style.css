@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', serif;
+    background-color: #f2dcbb;
+}
+
+h1 {
+    font-family: 'Texturina', serif;
+    color: white;
+    text-align: center;
+}
+
+table {
+    border: 1px solid #aaaaaa;
+    border-collapse: collapse;
+    background-color: rgba(252, 251, 233, 0.8);
+    color: #753C2B;
+}
+
+td {
+    border: 1px solid #aaaaaa;
+    padding: 5px 20px;
+}
+
+td:not(.book-name) {
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header-container {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/bg1.jpg);
+    background-position: top;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.bookshop-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.table-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    margin-left: 20%;
+    
+}
+
+.book-name {
+    width: 300px;
+}
+
+.book-price {
+    width: 90px;
+}
+
+.details-modal {
+    width: 420px;
+    height: 100vh;
+    flex-grow: 1;
+    padding-left: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+
+}
+
+.details-modal h2 {
+    font-family: 'Texturina', serif;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.modal-title {
+    font-family: 'Texturina';
+}
+
+.details-modal span {
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.details-container {
+    background-color: rgba(252, 251, 233, 0.9);
+    min-height: 100vh;
+    width: 100%;
+    transition: all 0.3s ease-in;
+    position: absolute;
+    color: #753C2B;
+}
+
+.details-container::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    background-color:rgba(252, 251, 233, 0.9);
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.move {
+    transform: translateX(420px);
+}
+
+.details-container.move:before {
+    opacity: 0.4;
+}
+
+.modal-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.modal-desc {
+    padding: 5px;
+}
+
+.modal-img {
+    width: 250px;
+    transition: all .2s;
+}
+
+.modal-img:hover {
+    transform: scale(1.1);
+}
+
+.modal-rate {
+    margin-top: 20px;
+}
+
+.create-link {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    width: max-content;
+    color: #753C2B;
+    transition: all .2s;
+}
+
+.create-link:hover {
+transform: scale(1.1);
+}
+
+.paging-buttons {
+    display: flex;
+    width: 50%;
+    
+}
+
+.btn-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.page-btn {
+    font-size: 16px;
+    margin: 5px;
+    height: 35px;
+    background-color: transparent;
+    border: 0;
+
+}
+
+.back-btn {
+align-self: center;
+}
+
+.next-btn {
+align-self: center;
+}
+
+.page-number {
+    align-self: center;
+    margin: 0 5px;
+}
+
+
+
+.minus, .plus, .rate-number {
+    display: inline !important;
+    margin: 10px;
+}
+
+.rate-number {
+    font-weight: 600;
+}
+
+.minus, .plus {
+    font-size: 18px;
+    color: #eeecda;
+    background-color: #753C2B;
+    padding: 5px 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.input-container {
+    background-color: rgba(252, 251, 233, 0.9);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5%;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    border-radius: 3px;
+}
+
+.input-container input {
+   margin-top: 8px;
+   padding: 5px 20px 5px 3px;
+   border: 1px solid black;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px;
+    background-color:#753C2B;
+    transition: all .3s;
+    color: #eeecda;
+}
+
+.btn:hover {
+    background-color: #e3bfb5;
+}
+
+.new-btn {
+    border: 1px solid black;
+}
+
+.add-warning {
+    color: red;
+    font-weight: 600;
+    width: 200px;
+    height: 20px;
+}
+
+.update-modal {
+    background-color: rgba(252, 251, 233, 0.9);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 10%;
+    padding: 20px;
+    width: 50%;
+    height: 30%;
+    border-radius: 3px;
+}
+
+.update-modal > * {
+    margin: 15px;
+    
+}
+
+.update-modal input {
+    margin-top: 5px;
+}
+
+
+.close-modal {
+    align-self: flex-end;
+    padding: 5px 8px;
+    background-color: #753C2B;
+    border: none;
+    margin-bottom: -20px;
+    cursor: pointer;
+    z-index: 5;
+
+}
+
+.table-header-price, .table-header-title {
+    cursor: pointer;
+}
+
+.table-header-id {
+    width: 90px;
+}
+

@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+  background: linear-gradient(to right, #642b73, #c6426e); 
+}
+
+.btn {
+    padding: 10px;
+    margin: 5px;
+    font-size: 15px;
+    position: absolute;
+    width: 120px;
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid salmon;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    transition: all 0.2s;
+    
+}
+
+.btn:hover {
+    background-color: salmon;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.game-btn {
+top: 100px;
+left: 50%;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.easy-btn {
+    left: 42%;
+    top: 155px;
+}
+
+.hard-btn {
+left: 50%;
+top: 155px;
+}
+
+.extreme-btn {
+    left: 58%;
+    top: 155px;
+}
+
+.table-main {
+background-color: rgba(0, 0, 0, .1);
+position: absolute;
+left: 46%;
+top: 30%;
+}
+
+.table {
+    border: 1px solid black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.table:hover {
+   transition: ease-in-out .1s;
+    color: #EFDC05;
+}
+
+.clicked {
+    background-color: rgba(0, 0, 0, .5);
+    color: black;
+}
+
+.stopwatch {
+    position: absolute;
+    left: 30%;
+    top: 120px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.main-heading {
+    position: absolute;
+    left: 46%;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    color: sandybrown;
+    
+}
+
+#display-area {
+    font-size: 20px;
+}

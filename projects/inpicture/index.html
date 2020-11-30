@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Picture</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="menu">
+        <button class="btn btn-start" onclick="init()">I am ready</button>
+        <button class="btn btn-restart" onclick="init()">Restart Game</button>
+    </div>
+    <div class="main-container">
+        <span class="question">Which country does this flag belong to?</span>
+        <div class="portrait-container">
+            <img src="./utils/1.jpg" alt="">
+        </div>
+
+        <div class="answer-container">
+            <p class="status">Try Again</p>
+            <span class="answer-one" onclick="checkAnswer(this)">ANSWER 1</span>
+            <span class="answer-two" onclick="checkAnswer(this)">ANSWER 2</span>
+        </div>
+
+    </div>
+    <div class="victory-msg">
+        <h1>You won!</h1>
+        <button class="btn btn-again" onclick="init()">Play Again?</button>
+        <div class="trophy">
+            <img src="./utils/trophy.png" alt="">
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
