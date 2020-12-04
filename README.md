@@ -1,1 +1,1 @@
-Coding Academy - Gallery
+Trying bootstrap
